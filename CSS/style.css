@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Open Sans';
+}
+
+html, body{
+    height: 100%;
+}
+
+.clear{
+    clear: both;
+}
+
+.center{
+    max-width: 1280px;
+    width: 100%; /*Largura*/
+    margin: 0 auto;
+}
+
+.header{
+    min-width: 100%;
+    padding: 0 2%;
+    width: 100%; /*Largura*/
+    height: 60px; /*Altura*/
+    background-color: #212343;
+} 
+
+.header img{
+     margin: 19px ;
+} 
+
+.container-banner{
+    padding: 0 2%;
+    width: 100%;  /*Largura*/
+    height: 557px; /*Altura*/
+    background-image: url('../imagens/header_bg.png');
+    background-size: cover;  /*Cover(Cubrir toda area)*/ /*tecnica para responsivo*/
+    background-position: center ; /*tecnica para responsivo*/
+} 
+
+.container-banner > .center{
+    height: 100%; /*Altura*/  /*height sempre quando usanmos % precisar herdar do elemento anterior*/
+    
+}
+
+.form{
+    padding: 10px; /*são usadas para gerar espaço ao redor do conteúdo de um elemento, dentro de qualquer borda definida.*/
+    width: 400px; /*Largura*/
+    height: calc(100% + 30px);  /*Altura*/  /*height sempre quando usanmos % precisar herdar do elemento anterior*/
+    background-color: rgba(120, 120, 120, 0.5);
+    border-color: rgba(120, 120, 120, 0.5);
+    border-width: 12px;
+    border-style: solid;
+    background-clip: padding-box;
+    float: right;
+    position: relative;
+    top: -15px; 
+    /*background-origin: ; SERVE PARA IMAGENS */
+} 
+
+.form h2{
+    font-weight:normal ; 
+    color: #999999;
+    font-size: 21px;
+} 
+
+.input-container{
+    margin-top: 20px;
+}
+
+.input-container span, .form p{
+    display: inline-block;
+    width: 100%;
+    color: #bbbbbb;
+    font-size: 17px;
+   /* font-weight: bold; define a grossura do traço*/
+} 
+
+.form p{
+    margin: 20px 0;
+}
+
+.input-container input[type=text]{
+    margin-top: 8px;
+    width: 344px;
+    height: 55px;
+    border-radius: 1px solid #ccc;
+} 
+
+.input-container input[type=email]{
+    margin-top: 8px;
+    width: 344px;
+    height: 55px;
+    border-radius: 1px solid #ccc;
+} 
+
+.form .input-submit-container{
+    text-align: center;
+}
+
+.form input[type=submit]{ /*botao enviar*/
+    border-radius: 5px;
+    color: white;
+    font-size: 25px;
+    width: 280px;
+    height: 56px;
+    display: inline-block; 
+    background-color: #363a6d; 
+    cursor: pointer;
+    border-bottom: 5px solid #4a5097 ;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.form input[type=submit]:hover{ /*botao enviar*/
+    background-color: #212343;
+} 
+
+.container-list{
+    padding: 30px;
+    margin-top: 100px;
+    float: left;
+    width: 519px;
+    height: 270px;
+    background-color: rgba(33, 35, 67, 0.7); /*usar quando for colocar opacidade*/
+} 
+
+.container-list ul{
+    
+    list-style-position: inside;
+}
+
+.container-list ul li{
+    color: white;
+    margin-top:18px ;
+}
+
+.container-2{       
+    padding: 40px 2%;
+   background-color: #DDDDDD;
+   text-align: center;
+}
+
+.container-2 h2{
+    font-weight: bolder;
+}
+
+.container-2 p{
+    width: 100%;
+    max-width: 768px;
+    margin: 15px 0;
+    display: inline-block;
+    text-align: justify;
+
+}
+
+.arrow{
+    position: relative;
+    top: 60px;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../imagens/arrow.png);
+    background-size: 100% 100%;
+}
+
+.section-1{
+    padding: 90px 2%;
+}
+.section-1 h2{
+    text-align: center;
+    color: #462663;
+    font-weight: normal;
+}
+
+.container-section{
+    margin-top: 40px;
+}
+
+
+.container-section{
+    text-align: center;
+}
+
+.container-single{
+    float:left ;
+    width: 33.333%; /*largura*/
+    padding: 30px;
+}
+
+.container-single p{
+    display: inline-block;
+    text-align: justify;
+    padding: 10px 25px;
+}
+
+.container-single img{
+    width: 70px;
+}
+
+.footer{
+    clear: both;
+    border-top: 4px solid #888888;
+    padding: 20px 0;
+    text-align: center;
+    color: #888;
+}
+
+.footer p{
+    margin-top: 8px;
+} 
+
+
+
+/*Responsivo */
+
+@media screen and (max-width:1024px) {
+    .header{
+        height: auto;
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+    .header img{
+        margin: 0;
+    }
+
+    .container-banner{
+        width: 100%;
+        padding:40px 2% ;
+        height: auto;
+        text-align: center;
+    }
+
+    .form{
+		max-width: 400px;
+		padding:10px;
+		width: 60%;
+		height: 100%;
+		float:right;
+		top:0;
+	}
+
+	.input-container input[type=text]{
+		width: 100%;
+		height: 55px;
+	}
+
+
+	.form input[type=submit]{
+		max-width: 280px;
+		height: 56px;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.container-2{
+		padding-right: 4%;
+		padding-left: 4%;
+	}
+	.container-list{
+		margin-top: 0;
+		float: none;
+		display: inline-block;
+		width: 100%;
+	}
+
+	.form{
+		float: none;
+		display: inline-block;
+		width: 90%;
+		margin-top:30px;
+	}
+
+	.container-single{
+		float: none;
+		display: inline-block;
+		width: 100%;
+		max-width: 600px;
+		padding:30px 0;
+	}
+}
